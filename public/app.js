@@ -174,6 +174,7 @@ fileExplorer.addFile({ type: "folder", name: "src/" });
 fileExplorer.addFile({ type: "folder", name: "src/include/" });
 fileExplorer.addFile({ type: "file", name: "src/include/screen.hpp" });
 fileExplorer.addFile({ type: "file", name: "src/main.cpp" });
+fileExplorer.addFile({ type: "file", name: "server/server.js" });
 fileExplorer.update();
 
 function openFileInEditor(type, filename) {
