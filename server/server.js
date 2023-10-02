@@ -17,12 +17,10 @@ server.listen(port, () => {
 });
 
 io.on("connection", (socket) => {
-    // console.log(`A User Connected on Socket: ${socket}`);
     socket.on("getFileContents", (filepath) => {
         let contents = fs.readFileSync(path.join(__dirname, "../", filepath), {
             encoding: "utf-8",
         });
-        console.log(contents);
         socket.emit("getFileContents", contents);
     });
     socket.on("saveFileContents", (data) => {

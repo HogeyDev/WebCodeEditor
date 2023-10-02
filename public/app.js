@@ -193,7 +193,6 @@ document.onkeydown = (event) => {
 };
 
 function saveFile() {
-    alert(text.htmlElement.value);
     socket.emit(
         "saveFileContents",
         JSON.stringify({
